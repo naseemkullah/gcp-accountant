@@ -1,0 +1,18 @@
+{
+  "name": "gcp-accountant",
+  "version": "1.0.0",
+  "description": "A tool to identify high cost resources in GCP at a granular level",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Naseem Ullah",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/bigquery": "^4.1.4",
+    "chalk": "^2.4.2",
+    "cliui": "^5.0.0",
+    "inquirer": "^6.5.0"
+  }
+}
