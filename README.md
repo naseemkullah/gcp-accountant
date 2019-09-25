@@ -38,8 +38,6 @@ First, `gcp-accountant` makes use of [inquirer](https://www.npmjs.com/package/in
 2. The name of the billing table
 3. The invoice month to perform cost analysis on in `YYYYMM` format
 
-Then `gcp-accountant` runs queries on the data by means of the aforementioned BigQuery client.
-
-Finally, `gcp-account` displays the results in the terminal by means of [cliui](https://www.npmjs.com/package/cliui) and [chalk](https://www.npmjs.com/package/chalk).
+Then `gcp-accountant` runs queries on the data by means of the aforementioned BigQuery client and the results are then displayed in the terminal by means of [cliui](https://www.npmjs.com/package/cliui) and [chalk](https://www.npmjs.com/package/chalk).
 
 ## THIS IS NOT AN OFFICIAL GOOGLE PRODUCT
