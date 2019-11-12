@@ -10,9 +10,9 @@
   "author": "Naseem Ullah",
   "license": "MIT",
   "dependencies": {
-    "@google-cloud/bigquery": "^4.1.4",
-    "chalk": "^2.4.2",
+    "@google-cloud/bigquery": "^4.4.0",
+    "chalk": "^3.0.0",
     "cliui": "^5.0.0",
-    "inquirer": "^6.5.0"
+    "inquirer": "^7.0.0"
   }
 }
