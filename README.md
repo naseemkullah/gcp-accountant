@@ -34,6 +34,7 @@ A tool to identify high cost resources in GCP at a granular level
 ## How it works
 
 First, `gcp-accountant` makes use of [inquirer](https://www.npmjs.com/package/inquirer) and the [Google BigQuery Client Library for Node.js](https://www.npmjs.com/package/@google-cloud/bigquery) to gather some info from the user:
+
 1. The name of the billing dataset
 2. The name of the billing table
 3. The invoice month to perform cost analysis on in `YYYYMM` format
