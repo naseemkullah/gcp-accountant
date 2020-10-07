@@ -31,6 +31,21 @@ A tool to identify high cost resources in GCP at a granular level
 
 * It is highly recommended that resources be labelled at a granular level. The granularity of the labels will be reflected in the results.
 
+## Installation
+
+    npm install -g
+
+## Usage
+
+Execute `gcp-accountant` and answer the questions:
+
+    $ gcp-accountant
+    ? What is the billing dataset called? (Use arrow keys)
+    ❯ billing
+      not-billing
+      not-billing-either
+    [..]
+
 ## How it works
 
 First, `gcp-accountant` makes use of [inquirer](https://www.npmjs.com/package/inquirer) and the [Google BigQuery Client Library for Node.js](https://www.npmjs.com/package/@google-cloud/bigquery) to gather some info from the user:

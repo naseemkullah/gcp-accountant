@@ -1,5 +1,7 @@
-const askQuestions = require('./lib/ask-questions');
-const queries = require('./lib/queries');
+#!/usr/bin/env node
+
+const askQuestions = require('../lib/ask-questions');
+const queries = require('../lib/queries');
 
 /*
 ^         Start of string
