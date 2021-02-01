@@ -12,11 +12,11 @@ $         end of string
 */
 const regex = RegExp(/^[a-z0-9_]+$/i);
 
-const run = async () => {
+(async () => {
   const answers = await askQuestions();
   // ensure no funny business with regards to dataset and table names
   if (!regex.test(answers.dataset) || !regex.test(answers.table)) {
-    console.error('Character detected that is not a letter (upper or lower case), number, or underscore');
+    console.fatal('Character detected that is not a letter (upper or lower case), number, or underscore');
     process.exit(1);
   }
 
@@ -27,6 +27,4 @@ const run = async () => {
   queries.network(answers);
   queries.preemptible(answers);
   queries.nonPreemptible(answers);
-};
-
-run();
+})();
