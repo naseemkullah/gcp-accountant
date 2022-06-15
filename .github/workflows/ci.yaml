@@ -1,0 +1,15 @@
+name: automerge dependabot
+on: [pull_request]
+
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+
+    permissions:
+      pull-requests: write
+      contents: write
+
+    steps:
+      - uses: fastify/github-action-merge-dependabot@e3f5ac84b6c9327b4dc978af248ed22b6f9dab08
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
