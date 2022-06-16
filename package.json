@@ -2,19 +2,32 @@
   "name": "gcp-accountant",
   "version": "1.0.0",
   "description": "A tool to identify high cost resources in GCP at a granular level",
-  "main": "cli.js",
+  "main": "build/src/index.js",
   "bin": {
-    "gcp-accountant": "./bin/cli.js"
+    "gcp-accountant": "build/src/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint"
   },
   "author": "Naseem Ullah",
   "license": "MIT",
   "dependencies": {
-    "@google-cloud/bigquery": "^5.5.0",
-    "chalk": "^4.1.0",
+    "@google-cloud/bigquery": "^6.0.0",
+    "chalk": "^4.1.2",
     "cliui": "^7.0.4",
-    "inquirer": "^7.3.3"
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.2.1",
+    "@types/node": "14.18.3",
+    "gts": "^3.1.0",
+    "typescript": "^4.7.3"
   }
 }

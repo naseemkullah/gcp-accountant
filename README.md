@@ -21,7 +21,7 @@
            |_||__
       jgs  (____))
 
-A tool to identify high cost resources in GCP at a granular level
+A tool to identify high-cost resources in GCP at a granular level
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ A tool to identify high cost resources in GCP at a granular level
 
 * You must be authorized to create BigQuery jobs
 
-* It is highly recommended that resources be labelled at a granular level. The granularity of the labels will be reflected in the results.
+* It is highly recommended that resources be labeled at a granular level. The granularity of the labels will be reflected in the results.
 
 ## Installation
 

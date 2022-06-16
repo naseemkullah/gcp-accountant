@@ -1,23 +1,26 @@
 #!/usr/bin/env node
 
-const askQuestions = require('../lib/ask-questions');
-const queries = require('../lib/queries');
+import {exit} from 'process';
+import askQuestions from './ask-questions';
+import * as queries from './queries';
 
 /*
-^         Start of string
-[a-z0-9]  a or b or c or ... z or 0 or 1 or ... 9 or _
-+         one or more times (change to * to allow empty string)
-$         end of string
-/i        case-insensitive
-*/
+ * ^         Start of string
+ * [a-z0-9]  a or b or c or ... z or 0 or 1 or ... 9 or _
+ * +         one or more times (change to * to allow empty string)
+ * $         end of string
+ * /i        case-insensitive
+ */
 const regex = RegExp(/^[a-z0-9_]+$/i);
 
 (async () => {
   const answers = await askQuestions();
   // ensure no funny business with regards to dataset and table names
   if (!regex.test(answers.dataset) || !regex.test(answers.table)) {
-    console.fatal('Character detected that is not a letter (upper or lower case), number, or underscore');
-    process.exit(1);
+    console.error(
+      'Character detected that is not a letter (upper or lower case), number, or underscore'
+    );
+    exit(1);
   }
 
   queries.service(answers);
